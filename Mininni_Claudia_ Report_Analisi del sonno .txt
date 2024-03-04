@@ -1,0 +1,109 @@
+Analisi del sonno 
+Dataset https://docs.google.com/spreadsheets/d/1zZZW8WcBu-YO56HQTwfcOoum_36tRoIUftW-3d7pAA4/edit#gid=1370259719
+Dashbord https://lookerstudio.google.com/s/jNaU6Pgnhzw
+Altro link se non dovesse funzionare il primo (EDITOR)  https://lookerstudio.google.com/reporting/fe42c957-0254-4ec1-b844-4a7b2d3f00b8
+
+Scopo dell'analisi
+	Recentemente ho avuto problemi riguardanti il disturbo del sonno, 
+	tanto da voler provare degli intgratori a base di melatonina per migliorare 
+	la qualità del sonno. I dati della qualità e quantità del sonno 
+	(ore di sonno leggero, profondo ed interruzioni) sono stati raccolti 
+	tramite l'app dello smartwatch 
+
+	Ho assunto gli integratori a partire dal 12 febbraio al 2 marzo, 
+	per un totale di 20 giorni consecutivi. 
+	I dati raccolti riguardano il periodo in cui ho effettuato l'integrazione di 
+	melatonina (20 gg) e il periodo immediamtamente precedente dal 23 gennaio al 11 
+	febbraio (20gg), al fine di poter ottenere un analisi bilanciata.
+	
+	Inoltre, ho scelto di combinare i dati relativi all'utilizzo del pc dal momento
+	che costituisce una parte preponderante delle mie giornate e potrebbe costituire
+	una sorgente di influenza.
+
+
+Prcedimento per l'analisi
+
+1. I dati raccolti dallo smartwatch sono stati riportati su un file di google fogli 
+
+	Descrizione dei dati :
+		- Data "Data notte"
+		- Orario di addormentamento "Addormentamento"
+		- Orario di risveglio "Risveglio"
+		- Tempi delle fasi del sonno, espressi in decimali di ore:
+				-sonno leggero "sonno leggero"
+				-profondo "sonno profondo"
+		- Numero d'interruzioni del sonno "Interruzioni"
+		- Durata dell'interruzione in minuti "tempo svegliio"
+		- Tempo di utilizzo del pc in decimali di ore "Utilizzo pc"
+
+2. Pulizia e formattazione dati, aggiunta di colonne utili all'ordinamento e alla rapprestentazione grafica dei dati in google looker.
+		- Aggiunta della colonna "Melatonina" per poter filtrare i dati
+		  più comodamente senza l'utilizzo del periodo "Datat notte";
+
+		- Aggiunta colonna Giorno al fine da poter apprezzare le differenzetra
+		  i giorni feriali e il fine settimana.
+
+		- Aggiunta di un nuovo foglio "Clcoli" dove sono state calcolate 
+		  le variabili utili per le rappresentazioni grafiche, 
+		  sopperendo alla limitata usabilità di Google looker per poter effettuare 
+		  determinate operazioni, connesse anche al filtro opportuno.
+		
+		- Aggiunta di un secondo foglio "Utilizzo schermi" per poter utilizzare 
+		  la funzione Combina dati di Google looker.
+
+3. Creazione della Dashbord in Google looker e storytelling:
+		- Scelta dei colori in linea con il tema del sonno e della notte.
+ 
+		- Impostazione pagina "Presentazione":
+				- Argomento trattato
+				- Scopo dell'analisi sottoforma di interrogazioni con un 
+					pulsante che permette l'approfondimento. 
+					Il pulsante funziona intorno all'icona.
+
+				- Parametri selezionati per l'analisi
+				- Durata dell'analisi, ho scelto di rappresentarla come 
+				 quantità di giorni piuttosto che come data del periodo 
+				 in quanto il periodo dell'anno non è fondamentale 
+				  per l'analisi condotta. 
+
+		- Impostazione pagina "Statistiche" dove sono presenti le 
+		  statistiche ottenute da una anilisi sul totale dei 40 giorni 
+
+		- Impostazione pagina "Melatonina" dove sono stste 
+		  evidenziate le principali differenze con il periodo
+		  di intrazione di melatonina. 
+
+		- Impostazione pagina "Influenza schermi" con le principali 
+		  statistiche ed un grafico di correlazione tra utilizzo 
+		  Pc e parametri del sonno. 
+		(Valore di correlaizone calcolato con google fogli in quanto non funzionavano le funzioni 
+		necessarie per il calcolo nella sezione campo calcolato)
+		  In questa occasione sono stati combinati i dati di due fogli 
+		  google differenti con il link della data notte. 
+
+		- Impostazione pagina "Conclusioni"
+
+4. Problematiche affrontate:
+		- il sistema utilizzato risulta poco fluido durante tutte 
+		  le azioni compiute rendendo poco efficente l'utilizzo del tempo dedicato.
+
+		- come soluzione più pratica e veloce è stato utile creare 
+		  i parametri calcoati direttamente sul foglio excel,
+		  in particoalre il dato di correlazione "utilizzo del pc - ore di sonno". 
+
+		- Avevo creato il filtro weekend nella pagina 2 ma ho dovuto 
+		rimuoverlo in quanto funzionava solo una volta caricata la pagine,
+		risultava già selezionato e una volta selezionato non era più funzionante.
+
+		- I dati relativi all'orario di addormentamento e risveglio 
+		  non sono stati utilizzati in quanto 
+		  richiedevano la scrittura di un algortimo complesso per poter 
+		  ottenere un dato corretto.
+
+5. Conclusioni: 
+		il lavoro è stato svolto al massiomo delle mie possibilità considerando i tempi previsti. 
+
+
+
+	
+		
